@@ -4,7 +4,7 @@ MAINTAINER Halisson Vitor
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-ENV LANGUAGE en_US.UTF-8
+ENV LANGUAGE es_CL.UTF-8
 
 # Install os dependencies
 RUN apt-add-repository ppa:brightbox/ruby-ng
@@ -30,7 +30,7 @@ RUN apt-get install -y nodejs \
     imagemagick \
     wkhtmltopdf
 
-RUN gem install bundler
+RUN gem install bundler -v 1.17.3
 
 ENV APP_HOME /share
 RUN mkdir $APP_HOME

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.0.13'
 
 # Use mysql as the database for Active Record
 gem 'mysql2', '0.3.21'
@@ -70,3 +70,5 @@ gem 'doorkeeper', '1.1.0'
 gem "omniauth-oauth2"#, '1.0.2'
 #gem 'omniauth-fluxapp' , :path => '/home/tp/Desktop/flux'
 gem 'omniauth-fluxapp' , :git  => 'https://github.com/stpnlr/omniauth-fluxapp.git'
+
+gem 'activerecord-session_store'

@@ -2,7 +2,7 @@ version: '2'
 services:
   fluxday-db:
     container_name: fluxday-db
-    image: mysql
+    image: mysql:5
     env_file:
       - db.env
 

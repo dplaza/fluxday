@@ -12,14 +12,10 @@ services:
     stdin_open: true
     build:
       context: .
-      dockerfile: Dockerfile.development
+      dockerfile: Dockerfile.production
     volumes:
       - .:/share
     env_file:
       - app.env
-    # depends_on:
-    #   - fluxday-db
-    # links:
-    #   - fluxday-db
     ports:
       - 3000:3000

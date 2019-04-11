@@ -45,6 +45,7 @@ RUN bundle install --jobs 20 --retry 5 --without development test
 
 ADD . $APP_HOME
 
+RUN bundle exec rake db:migrate
 RUN bundle exec rake assets:precompile
 
 CMD ["/sbin/my_init", "--", "rails server"]

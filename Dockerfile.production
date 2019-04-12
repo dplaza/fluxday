@@ -47,5 +47,9 @@ ADD . $APP_HOME
 
 RUN bundle exec rake assets:precompile
 
+RUN mkdir /etc/service/fluxday
+COPY run-production.sh /etc/service/fluxday/run
+RUN chmod +x /etc/service/fluxday/run
+
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

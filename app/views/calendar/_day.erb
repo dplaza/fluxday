@@ -19,6 +19,7 @@
           <a href="#panel<%= i+1 %>" class="collapse-task">
             <li class="task-name li-priority li-<%= entry.priority.to_s.downcase %>"><%= entry.name %>
               <div class="right">
+                <%= entry.user_ids.length %>
                 <%= raw("<div class='icon icon-author'></div>") if entry.user_id == current_user.id %>
                 <%= raw("<div class='icon icon-assignee'></div>") if entry.user_ids.include?(current_user.id) %>
               </div>

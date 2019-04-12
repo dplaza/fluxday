@@ -56,7 +56,7 @@
       </a></dd>
       <dd><a href="#user-tasks">
         Pending
-        <div class="fig"><%= @user.tasks.pending.count %></div>
+        <div class="fig"><%= @user.assignments.pending.count %></div>
       </a></dd>
       <div class="right meta">
         Reports
@@ -68,7 +68,7 @@
         <%= render :partial => 'teams/team_list', :locals => {:teams => @teams.present? ? @teams : @user.teams} %>
       </div>
       <div class="content" id="user-tasks">
-        <%#= render :partial=>'users/user_list',:locals=>{:users=>members.present? ? members : user.members} %>
+        <%= render :partial => 'tasks/task_listings', :locals => {:tasks => @tasks.present? ? @tasks : @user.assignments.pending} %>
       </div>
     </div>
   </div>
